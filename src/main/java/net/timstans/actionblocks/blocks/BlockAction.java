@@ -214,6 +214,7 @@ public abstract class BlockAction {
 		register(materials, new BlockActionStation());
 		register(materials, new BlockActionEjector());
 		register(materials, new BlockActionElevator());
+		register(materials, new BlockActionBrake());
 	}
 
 	/**

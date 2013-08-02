@@ -14,7 +14,7 @@ public class TCActionBlocks extends JavaPlugin {
 		Bukkit.getPluginManager().registerEvents(new ActionBlocksListener(), this);
 		FileConfiguration config = new FileConfiguration(this, "config.yml");
 		config.load();
-		config.setHeader("This is the configuration of the Blocks add-on of TrainCarts.");
+		config.setHeader("This is the configuration of the TCActionBlocks add-on for TrainCarts.");
 		config.addHeader("In here you can configure all blocks available");
 		config.setHeader("blocks", "\nConfiguration for individual action blocks can be set below");
 		BlockAction.init(config.getNode("blocks"));

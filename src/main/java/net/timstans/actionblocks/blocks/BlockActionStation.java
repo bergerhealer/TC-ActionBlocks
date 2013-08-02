@@ -17,6 +17,7 @@ import com.bergerkiller.bukkit.tc.TrainCarts;
 
 public class BlockActionStation extends BlockAction {
 	private double launchDistance = 10;
+   
 	private BlockMap<BlockFace> launchDirections = new BlockMap<BlockFace>();
 
 	@Override
@@ -47,6 +48,7 @@ public class BlockActionStation extends BlockAction {
 			group.middle().getActions().addActionLaunch(block.getLocation().add(0.5, 1.5, 0.5), 0.0);
 			if (TrainCarts.playSoundAtStation) {
 				group.getActions().addActionSizzle();
+				
 			}
 			group.getActions().addActionWaitForever();
 		}
