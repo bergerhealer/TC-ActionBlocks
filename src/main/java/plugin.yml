@@ -1,0 +1,8 @@
+name: TCActionBlocks
+main: net.timstans.actionblocks.TCActionBlocks
+version: ${project.version}
+authors: [timstans]
+description: Add-on for TrainCarts that allows specific Blocks to perform certain actions
+depend: [Train Carts]
+metrics: true
+dev-url: ${project.url}
