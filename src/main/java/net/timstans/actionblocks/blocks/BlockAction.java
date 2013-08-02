@@ -59,6 +59,10 @@ public abstract class BlockAction {
 		return this.material;
 	}
 
+	protected void setMaterial(Material material) {
+		this.material = material;
+	}
+
 	public boolean isPowered(Block block) {
 		return block.isBlockIndirectlyPowered() != this.isPowerInverted();
 	}
@@ -167,8 +171,9 @@ public abstract class BlockAction {
 	 * @return the input actionBlock
 	 */
 	public static <T extends BlockAction> T register(Material material, T actionBlock) {
-		blocks.put(material, actionBlock);
-		actionBlock.material = material;
+		BlockAction block = (BlockAction) actionBlock;
+		blocks.put(material, block);
+		block.setMaterial(material);
 		return actionBlock;
 	}
 
